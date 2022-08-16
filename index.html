@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .users {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+        }
+
+        .users h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .users::before {
+            content: "";
+            position: absolute;
+            width: 14%;
+            height: 100%;
+            left: 0;
+            background-color: #00bcb4;
+            z-index: -1;
+        }
+
+        .users__list {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1.5rem;
+        }
+
+        .users__item {
+            position: relative;
+            display: flex;
+            column-gap: 1rem;
+        }
+
+        .users__item::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #00bcb4;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            z-index: -1;
+        }
+
+        .users__item:hover::before {
+            transition: transform 0.5s;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .users__avatar {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.25rem;
+        }
+
+        .users__avatar img {
+            width: 100%;
+            max-width: 64px;
+        }
+
+        .users__content {
+            width: 100%;
+            position: relative;
+            color: #333;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .users__content span {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 2.5rem;
+            color: #333;
+            opacity: 0.25;
+        }
+    </style>
+    <title>List of people</title>
+</head>
+
+<body>
+
+    <section class="users">
+        <h1>Users</h1>
+
+        <ul class="users__list">
+
+            <li class="users__item">
+                <div class="users__avatar">
+                    <img src="img/avatar2.png" alt="avatar 2" />
+                </div>
+                <div class="users__content">
+                    <h2>Pouria Nayeb</h2>
+                    <h4>Senior web developer</h4>
+                    <span>#1</span>
+                </div>
+            </li>
+
+            <li class="users__item">
+                <div class="users__avatar">
+                    <img src="img/avatar5.png" alt="avatar 2" />
+                </div>
+                <div class="users__content">
+                    <h2>Maryam Eidivand</h2>
+                    <h4>Senior web developer</h4>
+                    <span>#2</span>
+                </div>
+            </li>
+
+            <li class="users__item">
+                <div class="users__avatar">
+                    <img src="img/avatar6.png" alt="avatar 2" />
+                </div>
+                <div class="users__content">
+                    <h2>Hoda Kalantari</h2>
+                    <h4>Senior web developer</h4>
+                    <span>#3</span>
+                </div>
+            </li>
+
+            <li class="users__item">
+                <div class="users__avatar">
+                    <img src="img/img_avatar.png" alt="avatar 2" />
+                </div>
+                <div class="users__content">
+                    <h2>Hamed Abdeli</h2>
+                    <h4>Chemist</h4>
+                    <span>#4</span>
+                </div>
+            </li>
+
+            <li class="users__item">
+                <div class="users__avatar">
+                    <img src="img/img_avatar2.png" alt="avatar 2" />
+                </div>
+                <div class="users__content">
+                    <h2>Giti khoshdel</h2>
+                    <h4>Senior web developer</h4>
+                    <span>#5</span>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+</body>
+
+</html>
